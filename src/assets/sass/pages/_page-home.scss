@@ -1,0 +1,35 @@
+.top-nav {
+  margin-top: 4.375rem;
+
+  @media (min-width: $medium-screen) {
+    padding: 0 20.3125rem 0 13.75rem;
+    margin-top: 0.8rem;
+  }
+}
+
+.page-title {
+  position: absolute;
+  top: 3.4em;
+  right: 1.25rem;
+  color: $color-primary;
+  font-size: 0.875rem;
+
+  @media (min-width: $small-screen) {
+    top: 1.8em;
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: $medium-screen) {
+    top: 1.1em;
+    font-size: 2.25rem;
+  }
+}
+
+.photographers-grid {
+  --min: 19.375rem;
+  display: grid;
+
+  grid-column-gap: 6.25rem;
+  grid-row-gap: 1.875rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min), auto));
+}

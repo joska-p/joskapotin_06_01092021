@@ -1,0 +1,63 @@
+.card {
+  @include opacify;
+
+  text-align: center;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+
+  > * {
+    //important. Need this for the eventlistener in js
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    box-shadow: none;
+  }
+
+  &:hover .card__img {
+    box-shadow: 0 0 0 0.1875rem $white, 0 0 0 0.375rem $color-primary;
+  }
+
+  &:focus-visible .card__img {
+    box-shadow: 0 0 0 0.1875rem $white, 0 0 0 0.375rem $color-focus;
+  }
+}
+
+.card__img {
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: auto;
+  border-radius: 12.5rem;
+  border-radius: 100vh;
+  object-fit: cover;
+}
+
+.card__name {
+  margin-top: 1.25rem;
+  color: $color-secondary;
+  font-size: 2.25rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.card__location {
+  margin-top: 0.25rem;
+  color: $color-primary;
+  font-size: 0.8125rem;
+  font-weight: normal;
+}
+.card__tagline {
+  color: #000;
+  font-size: 0.625rem;
+  font-weight: normal;
+}
+
+.card__pricing {
+  margin-bottom: 0.25rem;
+  color: $color-grey-400;
+  font-size: 0.5625rem;
+  font-weight: normal;
+}

@@ -1,0 +1,51 @@
+/* Layouts */
+body {
+  overflow-y: scroll; // prevent screen flickering when loading content
+}
+.page {
+  position: relative;
+  padding: 0 1.25rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  padding: 2.5rem 0 2.875rem;
+}
+
+.link-home {
+  position: absolute;
+  z-index: 20;
+  top: 2.5rem;
+  left: 1.25rem;
+
+  > * {
+    //important. Need this for the eventlistener in js
+    pointer-events: none;
+  }
+
+  &:hover .banner {
+    fill: $color-secondary;
+  }
+
+  &:focus-visible .banner {
+    fill: $color-focus;
+  }
+}
+
+.banner {
+  width: 9.375rem;
+  height: 2.375rem;
+  fill: $color-primary;
+
+  @media (min-width: $medium-screen) {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+.site-main {
+  padding-bottom: 4.75rem;
+  clear: both;
+}

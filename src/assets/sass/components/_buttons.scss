@@ -1,0 +1,68 @@
+/* Buttons */
+.btn {
+  padding: 0.375rem 1.125rem;
+  border: 0;
+  background-color: $color-primary;
+  border-radius: 5px;
+  color: $white;
+  font-size: 1.125rem;
+  font-weight: bold;
+
+  @media (min-width: $medium-screen) {
+    padding: 1.4375rem 1.125rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-tertiary;
+    color: $black;
+  }
+}
+
+.btn-like {
+  --heart-size: 0.75rem;
+
+  @media (min-width: $medium-screen) {
+    --heart-size: 1.1875rem;
+  }
+
+  position: relative;
+  display: inline-grid;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  > * {
+    pointer-events: none;
+  }
+
+  .btn-like__icon {
+    position: relative;
+    top: 1px;
+    width: var(--heart-size);
+    height: var(--heart-size);
+    margin: 0;
+    fill: $color-primary;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 100ms ease-out;
+  }
+
+  &:hover .btn-like__icon,
+  &:focus-visible .btn-like__icon {
+    transform: scale(1.2);
+  }
+
+  &:active .btn-like__icon {
+    transform: scale(1.1);
+  }
+
+  &:focus-visible {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:focus-visible .btn-like__icon {
+    fill: $color-focus;
+  }
+}

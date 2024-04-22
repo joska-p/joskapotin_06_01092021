@@ -1,0 +1,126 @@
+.photographer__resume {
+  position: relative;
+  z-index: 10;
+  padding-top: 3.75rem;
+}
+
+.photographer__picture {
+  float: right;
+}
+
+.photographer__img {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.photographer__name {
+  color: $color-secondary;
+  font-size: 2.25rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.photographer__location {
+  margin-top: 0.25 rem;
+
+  color: $color-primary;
+  font-size: 0.8125rem;
+  font-weight: normal;
+}
+
+.photographer__tagline {
+  margin-top: 0.125rem;
+  color: $color-grey-500;
+  font-size: 0.8125rem;
+  font-weight: normal;
+}
+
+.tag-nav-media {
+  padding: 0;
+  margin: 0.3rem 0 0;
+}
+
+.tag-nav-media .tag-list {
+  justify-content: flex-start;
+}
+
+.photographer__btn-contact {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  font-size: 1.125rem;
+  transform: translateX(-50%);
+}
+
+.photographer__aside {
+  position: fixed;
+  right: 2.25rem;
+  bottom: 0;
+  display: none;
+  padding: 1.25rem 1.875rem;
+  background-color: $color-tertiary;
+  border-radius: 5px 5px 0 0;
+}
+
+.btn-like__icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-left: 0.4375rem;
+}
+
+.photographer__likes,
+.photographer__pricing {
+  color: $black;
+  font-size: 1.5rem;
+}
+
+@media (min-width: $medium-screen) {
+  .photographer__resume {
+    padding-top: 8.125rem;
+  }
+
+  .photographer__img {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .photographer__name {
+    margin-right: 1em;
+    margin-bottom: 1rem;
+    float: left;
+    font-size: 4rem;
+  }
+
+  .photographer__location {
+    clear: left;
+    font-size: 1.5rem;
+  }
+
+  .photographer__tagline {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .tag-nav-media {
+    margin-top: 1rem;
+  }
+
+  .tag-nav-media .tag-link {
+    font-size: 1.125rem;
+  }
+
+  .photographer__btn-contact {
+    position: static;
+    float: left;
+    font-size: 1.25rem;
+    transform: translateX(0);
+    white-space: nowrap;
+  }
+
+  .photographer__aside {
+    display: flex;
+    column-gap: 4.1875rem;
+  }
+}
